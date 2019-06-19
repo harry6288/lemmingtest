@@ -9,13 +9,13 @@
 import SpriteKit
 import GameplayKit
 
-class GameScene: SKScene {
+class Level2: SKScene {
     
     var nextLevelButton:SKLabelNode!
     
     
     override func didMove(to view: SKView) {
-        print("This is level 1")
+        print("Loaded level 2")
         self.nextLevelButton = self.childNode(withName: "nextLevelButton") as! SKLabelNode
     }
     
@@ -35,8 +35,9 @@ class GameScene: SKScene {
         
         
         // MARK: Switch Levels
+        
         if (node.name == "nextLevelButton") {
-            let scene = SKScene(fileNamed:"Level2")
+            let scene = SKScene(fileNamed:"Level3")
             if (scene == nil) {
                 print("Error loading level")
                 return

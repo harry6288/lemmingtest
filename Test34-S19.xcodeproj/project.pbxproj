@@ -15,6 +15,10 @@
 		9BE2D79F22BA620C00F822BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BE2D79D22BA620C00F822BA /* Main.storyboard */; };
 		9BE2D7A122BA621700F822BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9BE2D7A022BA621700F822BA /* Assets.xcassets */; };
 		9BE2D7A422BA621700F822BA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BE2D7A222BA621700F822BA /* LaunchScreen.storyboard */; };
+		9BE2D7AC22BA71D700F822BA /* Level2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE2D7AB22BA71D700F822BA /* Level2.swift */; };
+		9BE2D7AE22BA71FA00F822BA /* Level2.sks in Resources */ = {isa = PBXBuildFile; fileRef = 9BE2D7AD22BA71FA00F822BA /* Level2.sks */; };
+		9BE2D7B022BA72C000F822BA /* Level3.sks in Resources */ = {isa = PBXBuildFile; fileRef = 9BE2D7AF22BA72C000F822BA /* Level3.sks */; };
+		9BE2D7B222BA734700F822BA /* Level3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE2D7B122BA734700F822BA /* Level3.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +32,10 @@
 		9BE2D7A022BA621700F822BA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9BE2D7A322BA621700F822BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9BE2D7A522BA621700F822BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9BE2D7AB22BA71D700F822BA /* Level2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level2.swift; sourceTree = "<group>"; };
+		9BE2D7AD22BA71FA00F822BA /* Level2.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Level2.sks; sourceTree = "<group>"; };
+		9BE2D7AF22BA72C000F822BA /* Level3.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Level3.sks; sourceTree = "<group>"; };
+		9BE2D7B122BA734700F822BA /* Level3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level3.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,11 +72,15 @@
 				9BE2D79522BA620C00F822BA /* GameScene.sks */,
 				9BE2D79722BA620C00F822BA /* Actions.sks */,
 				9BE2D79922BA620C00F822BA /* GameScene.swift */,
+				9BE2D7AB22BA71D700F822BA /* Level2.swift */,
 				9BE2D79B22BA620C00F822BA /* GameViewController.swift */,
 				9BE2D79D22BA620C00F822BA /* Main.storyboard */,
 				9BE2D7A022BA621700F822BA /* Assets.xcassets */,
 				9BE2D7A222BA621700F822BA /* LaunchScreen.storyboard */,
 				9BE2D7A522BA621700F822BA /* Info.plist */,
+				9BE2D7AD22BA71FA00F822BA /* Level2.sks */,
+				9BE2D7AF22BA72C000F822BA /* Level3.sks */,
+				9BE2D7B122BA734700F822BA /* Level3.swift */,
 			);
 			path = "Test34-S19";
 			sourceTree = "<group>";
@@ -132,8 +144,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				9BE2D79F22BA620C00F822BA /* Main.storyboard in Resources */,
+				9BE2D7AE22BA71FA00F822BA /* Level2.sks in Resources */,
 				9BE2D79622BA620C00F822BA /* GameScene.sks in Resources */,
 				9BE2D7A122BA621700F822BA /* Assets.xcassets in Resources */,
+				9BE2D7B022BA72C000F822BA /* Level3.sks in Resources */,
 				9BE2D7A422BA621700F822BA /* LaunchScreen.storyboard in Resources */,
 				9BE2D79822BA620C00F822BA /* Actions.sks in Resources */,
 			);
@@ -146,7 +160,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9BE2D7B222BA734700F822BA /* Level3.swift in Sources */,
 				9BE2D79A22BA620C00F822BA /* GameScene.swift in Sources */,
+				9BE2D7AC22BA71D700F822BA /* Level2.swift in Sources */,
 				9BE2D79C22BA620C00F822BA /* GameViewController.swift in Sources */,
 				9BE2D79422BA620C00F822BA /* AppDelegate.swift in Sources */,
 			);

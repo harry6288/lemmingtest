@@ -1,21 +1,14 @@
-//
-//  GameScene.swift
-//  Test34-S19
-//
-//  Created by MacStudent on 2019-06-19.
-//  Copyright © 2019 rabbit. All rights reserved.
-//
-
 import SpriteKit
 import GameplayKit
 
-class GameScene: SKScene {
+class Level3: SKScene {
     
     var nextLevelButton:SKLabelNode!
     
     
     override func didMove(to view: SKView) {
-        print("This is level 1")
+        print("Loaded level 3")
+        
         self.nextLevelButton = self.childNode(withName: "nextLevelButton") as! SKLabelNode
     }
     
@@ -35,8 +28,10 @@ class GameScene: SKScene {
         
         
         // MARK: Switch Levels
+        // This is level 3, so i made it go back to level 1
+        // Change it if you want
         if (node.name == "nextLevelButton") {
-            let scene = SKScene(fileNamed:"Level2")
+            let scene = SKScene(fileNamed:"GameScene")
             if (scene == nil) {
                 print("Error loading level")
                 return
@@ -46,6 +41,7 @@ class GameScene: SKScene {
                 view?.presentScene(scene!)
             }
         }
+ 
         
     }
 }
