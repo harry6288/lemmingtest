@@ -18,11 +18,13 @@ class GameScene: SKScene {
     var dt: TimeInterval = 0
     var wall:SKSpriteNode?
     var ground:SKSpriteNode?
+    var exit:SKSpriteNode?
     
     override func didMove(to view: SKView) {
         print("This is level 1")
         self.nextLevelButton = self.childNode(withName: "nextLevelButton") as! SKLabelNode
         self.wall?.physicsBody?.collisionBitMask = 0
+        self.dino.physicsBody?.allowsRotation = false
     }
     func spawndino() {
         let dino = SKSpriteNode(imageNamed:"frame-1")
@@ -64,7 +66,7 @@ class GameScene: SKScene {
             self.youLose()
         }
     }
-    
+    var lookingDir = "right"
     
     override func update(_ currentTime: TimeInterval) {
         // Called before each frame is rendered
@@ -72,7 +74,35 @@ class GameScene: SKScene {
         if (self.dt >= 2.5) {
             timeOfLastUpdate = currentTime
             self.spawndino()
+            
         }
+        
+        if (lookingDir == "right") {
+            self.dino.position.x = self.dino.position.x + 10
+        }
+        else if (lookingDir == "left") {
+            self.dino.position.x = self.dino.position.x - 10
+        }
+        // OPTION 2: Using SKActions
+        // let walkingAction = SKAction.moveBy(x: 2, y: 0, duration: 0)
+        // self.dino.run(walkingAction)
+        
+        // ------------
+        // Detect collision with right wall
+        // ------------
+        if (self.dino.position.x >= self.size.width) {
+            let lookLeftAction = SKAction.scaleX(to: -1, duration: 0)
+            self.dino.run(lookLeftAction)
+            lookingDir = "left"
+        }
+        
+        if (self.dino.position.x <= 0) {
+            let lookRightAction = SKAction.scaleX(to: 1, duration: 0)
+            self.dino.run(lookRightAction)
+            lookingDir = "right"
+        }
+        
+        
     }
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         let touch = touches.first
