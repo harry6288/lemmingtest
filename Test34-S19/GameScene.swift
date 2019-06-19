@@ -17,6 +17,7 @@ class GameScene: SKScene {
     var timeOfLastUpdate:TimeInterval = 0
     var dt: TimeInterval = 0
     var wall:SKSpriteNode?
+    var ground:SKSpriteNode?
     
     override func didMove(to view: SKView) {
         print("This is level 1")
@@ -50,6 +51,18 @@ class GameScene: SKScene {
         addChild(dino)
         self.dino.run(SKAction.repeatForever(walkingAnimation))
         
+    }
+    func didBegin(_ contact: SKPhysicsContact) {
+        
+        let nodeA = contact.bodyA.node
+        let nodeB = contact.bodyB.node
+        
+        if (nodeA?.name == "dino" && nodeB?.name == "exit") {
+            print("Player reached exit")
+        }
+        if (nodeA?.name == "dino" && nodeB?.name == "ground") {
+            self.youLose()
+        }
     }
     
     
@@ -86,6 +99,19 @@ class GameScene: SKScene {
             }
         }
         
+    }
+    var lose:Bool = false
+    
+    func youLose() {
+        self.lose = true
+        
+        print("YOU LOSE!")
+        let messageLabel = SKLabelNode(text: "YOU LOSE!")
+        messageLabel.fontColor = UIColor.yellow
+        messageLabel.fontSize = 60
+        messageLabel.position.x = self.size.width/2
+        messageLabel.position.y = self.size.height/2
+        addChild(messageLabel)
     }
 }
 
